@@ -10,42 +10,45 @@
 
 % More predefined colors can be found in 
 % https://en.wikibooks.org/wiki/LaTeX/Colors
+% Example photograph taken from Wikimedia Commons
+% https://commons.wikimedia.org/wiki/File:Kiara_Krit_passport.jpg
 
 \usepackage{simplecv}
 
-\boldname{Cetin}{Doruk}{D.}
+\boldname{Surname}{Name}{N.}
 
 \begin{document}
 
 % Heading
-\headinginline{Doruk Çetin}{
-    Website: \website{dcetin.me} \\ 
-    Email: \email{dcetin@ethz.ch} \\
-    % LinkedIn: \linkedin{doruk-cetin} \\
-    GitHub: \github{dcetin}
+\headinginline{Walson Low}{
+    Website: \website{walson-low.com} \\ 
+    Email: \email{walson.low.portfolio@gmail.com} \\
+    % LinkedIn: \linkedin{walson-low} \\
+    GitHub: \github{darkdread}
 }
 
-% \headingphoto{Doruk Çetin}{
-%     Website: \website{dcetin.me} \\ 
-%     Email: \email{dcetin@ethz.ch} \\
-%     % LinkedIn: \linkedin{doruk-cetin} \\
-%     GitHub: \github{dcetin}
-% }{photo.png}
+% \headingphoto{Name Surname}{
+%     Website: \website{example.com} \\ 
+%     Email: \email{example@example.edu} \\
+%     LinkedIn: \linkedin{name-surname} \\
+%     GitHub: \github{example}
+% }{photo.jpg}
 
 % Page One
-\import{sections/}{education.tex}
+\import{sections/}{summary.tex}
 \import{sections/}{experience.tex}
-\import{sections/}{publications.tex}
+%\import{sections/}{publications.tex}
+\sidebyside
+    {\import{sections/}{languages.tex}}
+    {\import{sections/}{technologies.tex}}
 
 \pagebreak
 
 % Page Two
-\import{sections/}{teaching.tex}
-\sidebyside
-    {\import{sections/}{skills.tex}}
-    {\import{sections/}{languages.tex}}
+%\import{sections/}{teaching.tex}
+\import{sections/}{education.tex}
 \import{sections/}{projects.tex}
-\import{sections/}{awards.tex}
-\import{sections/}{volunteering.tex}
+%\import{sections/}{awards.tex}
+%\import{sections/}{extracurricular.tex}
 
 \end{document}
